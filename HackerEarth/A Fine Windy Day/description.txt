@@ -1,0 +1,32 @@
+1. Hello, 
+I am Azmal Awasaf. I am describing my approach and procedure for the "A fine Windy Day" machine learning competition on HackerEarth in this file.
+
+2. First I have imported the necessary python modules. I have used numpy, pandas, matplotlib, sklearn and seaborn for this problem.
+
+3. I uploaded the train and test data to one of my github repositories and loaded the data from there.
+
+4. Then I carefully observed the data to gain insights.
+
+5. I have dropped 'tracking_id' and 'datetime' columns from the dataframe as I think these have too little impact on our target variable.
+
+6. As I have discovered a significant amount of NaN values for some of the columns. I have replaced the null values with 'mode' for each column. I did it for both categorical and numerical features.
+
+7. I have run some visualising tools to visualise the correlations among the attributes. I used histogram, scatter matrix, heatmap, and pairplot to visualise the correlations among the features.
+
+8. 'cloud_level' and 'turbine_status' are two categorical features in the dataframe. I have done One Hot Encoding to get rid of the categorical values so that the machine learning algorithm can understand the data well. The number of columns has been increased because of this. I dropped the actual columns of these variables after that. I used concat() method to get the dataframe in the desired form.
+
+9. I have separated the target variable from the dataframe which is 'windmill_generated_power(kW/h)'.
+
+10. I split the train data into train and set subset to get an idea about the accuracy after applying different ML algorithms.
+
+11. I have fitted the train data to 'DecisionTreeRegressor' and 'RandomForestRegressor' and calculated the score (According to the given metric) of each prediction with the test subset of training data. Turned out, 'RandomForestRegressor' gave a better score.
+
+12. Then I preprocessed the test data exactly the way I pro the train data.
+
+13. Then I run predicted with 'RandomForestRegressor' for the test data and got the output in 'ytest_pred_rfr' variable.
+
+14. I converted the variable into pandas dataframe and created the submission dataframe (ans) according to the description.
+
+15. I created 'ans.csv' file from the 'ans' dataframe.
+
+16. I hope I have described my procedure clearly. Thank you for reading.
